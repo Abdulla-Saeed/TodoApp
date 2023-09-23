@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var todos = [
-        Todo(Title: "Feed the cat"),
+        Todo(Title: "Feeding pets"),
         Todo(Title: "Buy groceries"),
         Todo(Title: "Finish project"),
         Todo(Title: "Call mom", isCompleted: true),
