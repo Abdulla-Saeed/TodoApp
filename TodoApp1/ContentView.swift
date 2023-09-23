@@ -1,21 +1,19 @@
-//
-//  ContentView.swift
-//  TodoApp1
-//
-//  Created by Abdulla Saeed Alblooshi on 23/09/2023.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @State private var todos = [
+        Todo(Title: "Feed the cat"),
+        Todo(Title: "Buy groceries"),
+        Todo(Title: "Finish project"),
+        Todo(Title: "Call mom", isCompleted: true),
+        Todo(Title: "Go for a run"),
+        Todo(Title: "Read a book")
+    
+    ]
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        List(todos) { todo in
+            Text(todo.Title)
         }
-        .padding()
     }
 }
 
