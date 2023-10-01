@@ -1,10 +1,3 @@
-//
-//  TodoApp1App.swift
-//  TodoApp1
-//
-//  Created by Abdulla Saeed Alblooshi on 23/09/2023.
-//
-
 import SwiftUI
 
 @main
