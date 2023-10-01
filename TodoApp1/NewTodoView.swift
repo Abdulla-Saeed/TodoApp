@@ -2,7 +2,7 @@
 //  NewTodoView.swift
 //  TodoApp1
 //
-//  Created by Abdulla Saeed Alblooshi on 01/10/2023.
+//  Created by Abdulla Saeed Alblooshi on 02/10/2023.
 //
 
 import SwiftUI
@@ -13,8 +13,6 @@ struct NewTodoView: View {
     }
 }
 
-struct NewTodoView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewTodoView()
-    }
+#Preview {
+    NewTodoView()
 }
