@@ -10,6 +10,7 @@ struct ContentView: View {
         Todo(Title: "Read a book", subtitle: "12")
         
     ]
+    @State private var showSheet = false
     var body: some View {
         NavigationStack {
             List($todos, editActions: [.all]) { $todo in
@@ -31,18 +32,27 @@ struct ContentView: View {
             }.navigationTitle("Todos")
                 .toolbar{
                     ToolbarItem(placement: .navigationBarLeading){
-                        EditButton()
+                        EditButton()}
+                    ToolbarItem(placement: .navigationBarTrailing){
+                        Button{
+                            showSheet = true
+                        }label: {
+                            Image(systemName: "plus")
+                        }
+                    }
+                    
+                }
+                .sheet(isPresented: $showSheet){
+                    NewTodoView(sourceArray: $todos).presentationDetents([.medium])
+                }
         }
-            }
+    }
+    
+    
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
         }
     }
 }
-
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
